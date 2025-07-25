@@ -1,0 +1,11 @@
+A estratégia utilizada foi criar testes separados. Os testes foram criados dentro da pasta tests/, e foram focados os seguintes pontos:
+
+Testar se é possível cadastrar um médico corretamente.
+
+Verificar se o sistema impede o cadastro de médicos com nomes duplicados, independentemente de letras maiúsculas ou minúsculas.
+
+Testar o formulário de agendamento de consulta, garantindo que os dados enviados são válidos, especialmente o vínculo com paciente e médico cadastrados no banco.
+
+Optamos por usar o pytest porque ele é mais direto, exige menos configuração e funciona muito bem com o Django, especialmente com o uso do @pytest.mark.django_db para testes que interagem com o banco.
+
+Decidimos testar principalmente os formulários, já que é onde ocorrem as principais validações da aplicação. Dessa forma, conseguimos garantir que as regras de negócio mais importantes estão funcionando como esperado.
